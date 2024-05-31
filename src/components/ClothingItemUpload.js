@@ -20,7 +20,7 @@ const ClothingItemUpload = () => {
 
   const handleUpload = async () => {
     if (file) {
-      const storageRef = ref(storage, `clothing/${file.name}`);
+      const storageRef = ref(storage, `${category}Clothing/${file.name}`);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
@@ -33,9 +33,8 @@ const ClothingItemUpload = () => {
         },
         async () => {
           const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-          await addDoc(collection(db, 'clothing'), {
-            url: downloadURL,
-            category: category,
+          await addDoc(collection(db, `${category}Clothing`), {
+            imageUrl: downloadURL,
           });
           navigate('/browse');
         }
