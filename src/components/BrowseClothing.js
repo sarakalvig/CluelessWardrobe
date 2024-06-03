@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, query, onSnapshot } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
 import './BrowseClothing.css';
+import '../App.css';
 
 const BrowseClothing = () => {
     const [topClothing, setTopClothing] = useState([]);
@@ -46,38 +46,26 @@ const BrowseClothing = () => {
 
     return (
         <div className="browse-container">
-            <header>
-                <h1>CHER'S WARDROBE</h1>
-                <Link to="/browse" className="header-button">BROWSE</Link>
-            </header>
-            <div className="clothing-container">
-                <div className="clothing-item">
-                    <button onClick={handlePrevTop}>&lt;&lt;</button>
+            <div className="column">
+                <div className="row">
                     {topClothing.length > 0 && (
                         <img src={topClothing[currentTopIndex].imageUrl} alt="Top Clothing" />
                     )}
-                    <button onClick={handleNextTop}>&gt;&gt;</button>
                 </div>
-                <div className="clothing-item">
-                    <Link to="/upload" className="side-button left">UPLOAD</Link>
-                    <button onClick={handlePrevBottom}>&lt;&lt;</button>
+                <div className="row buttons">
+                    <button onClick={handlePrevTop}>&lt;&lt; Prev</button>
+                    <button onClick={handleNextTop}>Next &gt;&gt;</button>
+                </div>
+                <div className="row">
                     {bottomClothing.length > 0 && (
                         <img src={bottomClothing[currentBottomIndex].imageUrl} alt="Bottom Clothing" />
                     )}
-                    <button onClick={handleNextBottom}>&gt;&gt;</button>
-                    <Link to="/list" className="side-button right">LIST</Link>
+                </div>
+                <div className="row buttons">
+                    <button onClick={handlePrevBottom}>&lt;&lt; Prev</button>
+                    <button onClick={handleNextBottom}>Next &gt;&gt;</button>
                 </div>
             </div>
-            <footer>
-                <button className="footer-button">SHOES</button>
-                <button className="footer-button">JEWELRY</button>
-                <button className="footer-button">SCARVES</button>
-                <button className="footer-button">PANTWHOSE</button>
-                <button className="footer-button">UNDERWEAR</button>
-                <button className="footer-button">PANTS</button>
-                <button className="footer-button">SWEATERS</button>
-                <button className="footer-button">MORE</button>
-            </footer>
         </div>
     );
 };

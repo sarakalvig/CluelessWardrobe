@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { db, storage } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
 import './ClothingItemUpload.css';
+import '../App.css';
 
 const ClothingItemUpload = () => {
   const [file, setFile] = useState(null);
@@ -43,30 +44,32 @@ const ClothingItemUpload = () => {
   };
 
   return (
-    <div className="upload-container">
-      <h1>Upload Clothing Item</h1>
-      <input type="file" onChange={handleFileChange} />
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="top"
-            checked={category === 'top'}
-            onChange={handleCategoryChange}
-          />
-          Top Clothing
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="bottom"
-            checked={category === 'bottom'}
-            onChange={handleCategoryChange}
-          />
-          Bottom Clothing
-        </label>
+    <div className="upload-page">
+      <div className="upload-container">
+        <h1>Upload Clothing Item</h1>
+        <input type="file" onChange={handleFileChange} />
+        <div>
+          <label>
+            <input
+              type="radio"
+              value="top"
+              checked={category === 'top'}
+              onChange={handleCategoryChange}
+            />
+            Top Clothing
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="bottom"
+              checked={category === 'bottom'}
+              onChange={handleCategoryChange}
+            />
+            Bottom Clothing
+          </label>
+        </div>
+        <button onClick={handleUpload}>Upload</button>
       </div>
-      <button onClick={handleUpload}>Upload</button>
     </div>
   );
 };

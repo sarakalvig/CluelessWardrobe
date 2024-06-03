@@ -1,21 +1,91 @@
-.App {
-  text-align: center;
+.header {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 74px; /* Set height to 74 pixels */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-nav {
+.header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header .header-content h1 {
+  margin: 0;
+}
+
+.header nav {
+  display: flex;
+  gap: 1em;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'LeviAdobeDia', sans-serif;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 74px; /* Set height to 74 pixels */
+  text-align: center;
+  padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #333;
-  padding: 1em;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
 }
 
-nav a {
+.footer button {
+  background-color: #444;
   color: white;
-  margin: 0 1em;
-  text-decoration: none;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-family: 'LeviAdobeDia', sans-serif;
   font-weight: bold;
+  border-radius: 5px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.footer button:hover {
+  background-color: #666;
+}
+
+button {
+  background-color: #ccc;
+  color: #000;
+  /*
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.5em 1em;*/
+  cursor: pointer;
+  font-family: 'LeviAdobeDia', sans-serif;
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+
+button:hover {
+  background-color: #aaa;
 }

@@ -1,137 +1,74 @@
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/* BrowseClothing.css */
 
 .browse-container {
-    width: 800px;
-    background-image: url('../assets/leopard-pattern.jpg'); /* Ensure this path is correct */
-    background-size: cover;
+    width: 100vw; /* Full viewport width */
+    height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+    background-image: url('../assets/leopard-pattern.jpg');
+    background-size: cover; /* Ensure the background image covers the container */
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    position: relative;
-}
-
-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Arrange columns vertically */
     align-items: center;
-    background-color: #000;
-    padding: 10px 20px;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-header h1 {
-    margin: 0;
-    flex: 1;
-    text-align: left;
-}
-
-.header-button {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.header-button:hover {
-    text-decoration: underline;
-}
-
-.clothing-container {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.clothing-item {
+    width: 443px; /* Set column width */
+    height: 100%; /* Ensure column takes full height */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    justify-content: flex-start; /* Start items from the top */
+  }
+  
+  .row {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 2em;
-    position: relative;
-}
-
-.clothing-item img {
-    max-width: 100%;
-    max-height: 200px;
-    width: auto;
-    height: auto;
-}
-
-.clothing-item button {
-    background-color: #999;
-    color: #000;
-    border: 2px solid #000;
-    padding: 10px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.clothing-item button:hover {
-    background-color: #777;
-}
-
-.side-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #999;
-    color: #fff;
-    border: 2px solid #000;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-}
-
-.side-button.left {
-    left: -80px;
-    background-color: #0000ff; /* Blue color for Upload button */
-}
-
-.side-button.right {
-    right: -80px;
-    background-color: #808080; /* Grey color for List button */
-}
-
-.side-button:hover {
-    background-color: #777;
-}
-
-footer {
+    align-items: center;
+    width: 100%;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+  
+  .row img {
+    width: 443px; /* Set image width */
+    height: 289px; /* Set image height */
+    object-fit: cover; /* Crop the image to fit the dimensions */
+    object-position: center; /* Center the image within the container */
+    border-radius: 5px;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .row.buttons {
+    height: calc((100vh - 148px - 2 * 289px) / 2); /* Set button row height */
     display: flex;
     justify-content: space-between;
-    background-color: #000;
-    padding: 10px 20px;
-}
-
-.footer-button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+    width: 100%; /* Ensure buttons span full width of the column */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+  
+  .row.buttons button {
+    width: 144px; /* Set button width */
+    height: 100%; /* Set button height to fill the row */
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
     cursor: pointer;
-    margin: 0 5px;
-}
-
-.footer-button:hover {
-    background-color: #777;
-}
+    font-family: 'LeviAdobeDia', sans-serif;
+    font-weight: bold;
+    margin: 0; /* Remove margin */
+    border-radius: 0; /* Remove border radius for sharp edges */
+  }
+  
+  .row.buttons button:hover {
+    background-color: #aaa;
+  }
+  
