@@ -52,18 +52,22 @@ const BrowseClothing = () => {
                         <img src={topClothing[currentTopIndex].imageUrl} alt="Top Clothing" />
                     )}
                 </div>
-                <div className="row buttons">
-                    <button onClick={handlePrevTop}>&lt;&lt; Prev</button>
-                    <button onClick={handleNextTop}>Next &gt;&gt;</button>
+                <div className="row buttons-container">
+                    <div className="row buttons">
+                        <button onClick={handlePrevTop}>&lt;&lt; Prev</button>
+                        <button onClick={handleNextTop}>Next &gt;&gt;</button>
+                    </div>
                 </div>
                 <div className="row">
                     {bottomClothing.length > 0 && (
                         <img src={bottomClothing[currentBottomIndex].imageUrl} alt="Bottom Clothing" />
                     )}
                 </div>
-                <div className="row buttons">
-                    <button onClick={handlePrevBottom}>&lt;&lt; Prev</button>
-                    <button onClick={handleNextBottom}>Next &gt;&gt;</button>
+                <div className="row buttons-container">
+                    <div className="row buttons">
+                        <button onClick={handlePrevBottom}>&lt;&lt; Prev</button>
+                        <button onClick={handleNextBottom}>Next &gt;&gt;</button>
+                    </div>
                 </div>
             </div>
         </div>
