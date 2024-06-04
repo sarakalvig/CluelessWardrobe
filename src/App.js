@@ -20,7 +20,16 @@ const Header = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <span className="more-text">MORE</span>
+    <div className="footer-buttons">
+      <span className="footer-button">SHOES</span>
+      <span className="footer-button">JEWELRY</span>
+      <span className="footer-button">SCARVES</span>
+      <span className="footer-button">PANTYHOSE</span>
+      <span className="footer-button">UNDERWEAR</span>
+      <span className="footer-button">PANTS</span>
+      <span className="footer-button">SWEATERS</span>
+      <span className="footer-button more-text">MORE</span>
+    </div>
   </footer>
 );
 

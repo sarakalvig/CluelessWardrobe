@@ -21,7 +21,6 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -36,6 +35,7 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 5px 10px; /* Add padding for 90s effect */
   font-size: large;
 }
 
@@ -74,6 +74,27 @@ html, body {
   box-sizing: border-box;
   border-top: 3px solid #000; /* Add border for 90s effect */
   box-shadow: 0 -4px 2px -2px gray; /* Add shadow for 90s effect */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2em; /* Add space between buttons */
+}
+
+.footer-button {
+  cursor: pointer;
+  font-family: 'LeviAdobeDia', sans-serif;
+  font-size: x-large;
+  border: 2px solid #000; /* Add border for 90s effect */
+  padding: 5px 10px; /* Add padding for 90s effect */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Add shadow for 90s effect */
+  color: white;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+  background-color: #333; /* Change background color on hover for better visibility */
 }
 
 .more-text {
