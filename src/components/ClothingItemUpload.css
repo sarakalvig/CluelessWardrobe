@@ -2,13 +2,13 @@
 
 .upload-page {
   width: 100vw; /* Full viewport width */
-  min-height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+  min-height: calc(100vh - 120px); /* Full viewport height minus header and footer height */
   background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 74px; /* Space for the fixed header */
-  padding-bottom: 74px; /* Space for the fixed footer */
+  padding-top: 60px; /* Space for the fixed header */
+  padding-bottom: 60px; /* Space for the fixed footer */
   display: flex;
   justify-content: center;
   align-items: center;

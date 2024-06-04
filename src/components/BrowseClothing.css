@@ -2,7 +2,7 @@
 
 .browse-container {
   width: 100vw; /* Full viewport width */
-  height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+  height: calc(100vh - 120px); /* Full viewport height minus header and footer height */
   background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
@@ -10,15 +10,15 @@
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  padding-top: 74px; /* Space for the fixed header */
-  padding-bottom: 74px; /* Space for the fixed footer */
+  padding-top: 60px; /* Space for the fixed header */
+  padding-bottom: 60px; /* Space for the fixed footer */
 }
 
 .column {
   display: flex;
   flex-direction: column;
   width: 443px; /* Set column width */
-  height: calc(100vh - 148px); /* Set column height to fill space between header and footer */
+  height: calc(100vh - 120px); /* Set column height to fill space between header and footer */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc((100vh - 148px - 2 * 50px) / 2); /* Calculate height for images */
+  height: calc((100vh - 120px - 2 * 50px) / 2); /* Calculate height for images */
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
@@ -63,7 +63,7 @@
   cursor: pointer;
   font-family: 'LeviAdobeDia', sans-serif;
   font-weight: bold;
-  font-size: xx-large;
+  font-size: x-large;
   margin: 0; /* Remove margin */
   border-radius: 0; /* Remove border radius for sharp edges */
   box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */

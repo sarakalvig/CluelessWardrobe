@@ -2,13 +2,13 @@
 
 .list-container {
   width: 100vw; /* Full viewport width */
-  height: calc(100vh - 80px); /* Full viewport height minus header and footer height */
+  height: calc(100vh - 60px); /* Full viewport height minus header and footer height */
   background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 74px; /* Space for the fixed header */
-  padding-bottom: 74px; /* Space for the fixed footer */
+  padding-top: 60px; /* Space for the fixed header */
+  padding-bottom: 60px; /* Space for the fixed footer */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +64,7 @@
 }
 
 .clothing-item button {
-  background-color: #007bff;
+  background-color: #FF0000;
   color: #fff;
   border: 3px solid #000; /* Thick border for a 90s feel */
   padding: 10px;
@@ -74,5 +74,5 @@
 }
 
 .clothing-item button:hover {
-  background-color: #0056b3;
+  background-color: #B20000;
 }
