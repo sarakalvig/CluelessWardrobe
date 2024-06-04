@@ -3,8 +3,8 @@
 .upload-page {
   width: 100vw; /* Full viewport width */
   min-height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
-  background-image: url('/Users/saraostdahl/development/clueless-wardrobe/src/assets/hanger-pattern.png');
-  background-size: cover;
+  background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
+  background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 74px; /* Space for the fixed header */
@@ -18,7 +18,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 2em;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

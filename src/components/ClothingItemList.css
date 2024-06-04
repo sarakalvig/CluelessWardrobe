@@ -1,46 +1,65 @@
+/* ClothingItemList.css */
+
 .list-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  h1, h2 {
-    margin: 20px 0;
-  }
-  
-  .clothing-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .clothing-item {
-    margin: 10px;
-  }
-  
-  .clothing-item img {
-    max-width: 200px;
-    max-height: 200px;
-    border: 1px solid #ccc;
-  }
-  
-  .clothing-item p {
-    margin-top: 5px;
-  }
-  
+  width: 100vw; /* Full viewport width */
+  min-height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+  background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
+  background-size: cover; /* Ensure the background image covers the container */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 74px; /* Space for the fixed header */
+  padding-bottom: 74px; /* Space for the fixed footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.list-content {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  margin: 20px 0;
+}
+
+.clothing-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clothing-item {
+  margin: 10px;
+}
+
+.clothing-item img {
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid #ccc;
+}
+
+.clothing-item p {
+  margin-top: 5px;
+}
