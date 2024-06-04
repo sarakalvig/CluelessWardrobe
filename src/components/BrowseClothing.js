@@ -9,6 +9,8 @@ const BrowseClothing = () => {
   const [bottomClothing, setBottomClothing] = useState([]);
   const [currentTopIndex, setCurrentTopIndex] = useState(0);
   const [currentBottomIndex, setCurrentBottomIndex] = useState(0);
+  const [isTopPaused, setIsTopPaused] = useState(false);
+  const [isBottomPaused, setIsBottomPaused] = useState(false);
 
   useEffect(() => {
     const qTop = query(collection(db, 'topClothing'));
@@ -29,47 +31,59 @@ const BrowseClothing = () => {
   }, []);
 
   const handleNextTop = () => {
-    setCurrentTopIndex((prevIndex) => (prevIndex + 1) % topClothing.length);
+    if (!isTopPaused) {
+      setCurrentTopIndex((prevIndex) => (prevIndex + 1) % topClothing.length);
+    }
   };
 
   const handlePrevTop = () => {
-    setCurrentTopIndex((prevIndex) => (prevIndex - 1 + topClothing.length) % topClothing.length);
+    if (!isTopPaused) {
+      setCurrentTopIndex((prevIndex) => (prevIndex - 1 + topClothing.length) % topClothing.length);
+    }
   };
 
   const handleNextBottom = () => {
-    setCurrentBottomIndex((prevIndex) => (prevIndex + 1) % bottomClothing.length);
+    if (!isBottomPaused) {
+      setCurrentBottomIndex((prevIndex) => (prevIndex + 1) % bottomClothing.length);
+    }
   };
 
   const handlePrevBottom = () => {
-    setCurrentBottomIndex((prevIndex) => (prevIndex - 1 + bottomClothing.length) % bottomClothing.length);
+    if (!isBottomPaused) {
+      setCurrentBottomIndex((prevIndex) => (prevIndex - 1 + bottomClothing.length) % bottomClothing.length);
+    }
   };
 
-  const handleSelectTop = () => {
-    alert(`Selected Top: ${topClothing[currentTopIndex]?.imageUrl}`);
+  const handlePauseTop = () => {
+    setIsTopPaused(!isTopPaused);
   };
 
-  const handleSelectBottom = () => {
-    alert(`Selected Bottom: ${bottomClothing[currentBottomIndex]?.imageUrl}`);
+  const handlePauseBottom = () => {
+    setIsBottomPaused(!isBottomPaused);
   };
 
   return (
     <div className="browse-container">
       <div className="column">
         <div className="row">
-          <img src={topClothing[currentTopIndex]?.imageUrl} alt="Top Clothing" />
+          {topClothing.length > 0 && (
+            <img src={topClothing[currentTopIndex]?.imageUrl} alt="Top Clothing" />
+          )}
         </div>
         <div className="row buttons-container">
-          <button onClick={handlePrevTop}>&lt;&lt;</button>
-          <button className="select-button" onClick={handleSelectTop}>Select</button>
-          <button onClick={handleNextTop}>&gt;&gt;</button>
+          <button onClick={handlePrevTop}>{'\u25C0\u25C0'}</button> {/* Two reversed play icons */}
+          <button className="select-button" onClick={handlePauseTop}>{isTopPaused ? '\u25B6' : '\u2016'}</button> {/* Play/Pause icon */}
+          <button onClick={handleNextTop}>{'\u25B6\u25B6'}</button> {/* Two play icons */}
         </div>
         <div className="row">
-          <img src={bottomClothing[currentBottomIndex]?.imageUrl} alt="Bottom Clothing" />
+          {bottomClothing.length > 0 && (
+            <img src={bottomClothing[currentBottomIndex]?.imageUrl} alt="Bottom Clothing" />
+          )}
         </div>
         <div className="row buttons-container">
-          <button onClick={handlePrevBottom}>&lt;&lt;</button>
-          <button className="select-button" onClick={handleSelectBottom}>Select</button>
-          <button onClick={handleNextBottom}>&gt;&gt;</button>
+          <button onClick={handlePrevBottom}>{'\u25C0\u25C0'}</button> {/* Two reversed play icons */}
+          <button className="select-button" onClick={handlePauseBottom}>{isBottomPaused ? '\u25B6' : '\u2016'}</button> {/* Play/Pause icon */}
+          <button onClick={handleNextBottom}>{'\u25B6\u25B6'}</button> {/* Two play icons */}
         </div>
       </div>
     </div>

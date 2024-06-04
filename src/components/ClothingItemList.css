@@ -2,7 +2,7 @@
 
 .list-container {
   width: 100vw; /* Full viewport width */
-  height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+  height: calc(100vh - 80px); /* Full viewport height minus header and footer height */
   background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
@@ -26,6 +26,7 @@
   margin-bottom: 20px;
   color: #fff; /* White text color */
   font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  width: 80%; /* Reduce width for smaller content box */
 }
 
 .clothing-items {

@@ -57,7 +57,7 @@
 .buttons-container button {
   width: 144px; /* Set button width */
   height: 100%; /* Set button height to fill the row */
-  background-color: #e0e0e0;
+  background-color: #C0C0C0;
   color: #000;
   border: 3px solid #000; /* Thick border */
   cursor: pointer;
@@ -74,16 +74,17 @@
 }
 
 .buttons-container button:hover {
-  background-color: #c0c0c0;
+  background-color: #A9A9A9;
 }
 
 .buttons-container .select-button {
-  background-color: #e0e0e0;
+  background-color: #C0C0C0;
   color: #000;
   margin: 0 5px; /* Add margin for spacing */
   box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
   text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
 }
+
 .buttons-container .select-button:hover {
-  background-color: #c0c0c0;
+  background-color: #A9A9A9;
 }

@@ -60,7 +60,7 @@ input[type="file"] {
   display: block;
   margin: 1em 0;
   font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
-  background-color: grey;
+  background-color: #C0C0C0;
   border: 3px solid #000; /* Thick border for a 90s feel */
   box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
   padding: 0.5em;
