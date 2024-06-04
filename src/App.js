@@ -4,13 +4,11 @@ import BrowseClothing from './components/BrowseClothing';
 import ClothingItemList from './components/ClothingItemList';
 import ClothingItemUpload from './components/ClothingItemUpload';
 import './index.css';
-import './styles.css';
 import './App.css';
 
 const Header = () => (
   <header className="header">
     <div className="header-content">
-      <h1>CHER'S WARDROBE</h1>
       <nav>
         <Link to="/upload">UPLOAD</Link>
         <Link to="/list">LIST</Link>
@@ -22,7 +20,7 @@ const Header = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <button>MORE</button>
+    <span className="more-text">MORE</span>
   </footer>
 );
 

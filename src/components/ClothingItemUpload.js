@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { db, storage } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
@@ -36,6 +36,7 @@ const ClothingItemUpload = () => {
           const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
           await addDoc(collection(db, `${category}Clothing`), {
             imageUrl: downloadURL,
+            name: file.name,
           });
           navigate('/browse');
         }
@@ -68,7 +69,9 @@ const ClothingItemUpload = () => {
             Bottom Clothing
           </label>
         </div>
-        <button onClick={handleUpload}>Upload</button>
+        <div className="button-container">
+          <button onClick={handleUpload}>Upload</button>
+        </div>
       </div>
     </div>
   );

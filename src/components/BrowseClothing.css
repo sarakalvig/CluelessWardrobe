@@ -3,25 +3,21 @@
 .browse-container {
   width: 100vw; /* Full viewport width */
   height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
-  background-image: url('../assets/leopard-pattern.jpg');
+  background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column; /* Arrange columns vertically */
-  align-items: center;
-  justify-content: center; /* Center items vertically */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-  overflow: hidden; /* Prevent overflow */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding-top: 74px; /* Space for the fixed header */
+  padding-bottom: 74px; /* Space for the fixed footer */
 }
 
 .column {
   display: flex;
   flex-direction: column;
   width: 443px; /* Set column width */
-  justify-content: flex-start; /* Align items to the start */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
@@ -30,6 +26,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 300px; /* Set row height for images */
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
@@ -37,44 +34,52 @@
 
 .row img {
   width: 443px; /* Set image width */
-  height: 289px; /* Set image height */
+  height: 300px; /* Set image height */
   object-fit: cover; /* Crop the image to fit the dimensions */
   object-position: center; /* Center the image within the container */
   border-radius: 5px;
 }
 
-.row.buttons-container {
-  height: 50px; /* Set button row height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ensure buttons span full width of the column */
-  background-color: black; /* Set background color of the container */
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-.row.buttons {
+.buttons-container {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ensure buttons span full width of the container */
-  max-width: 443px; /* Match the width of the image */
-  padding: 0 1em; /* Add some padding inside the container */
+  align-items: center;
+  width: 100%; /* Ensure buttons span full width of the column */
+  height: 50px; /* Set button row height */
+  background-color: black; /* Black background for the container */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  border: 1px solid #000; /* Thick border for a 90s feel */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
-.row.buttons button {
+.buttons-container button {
   width: 144px; /* Set button width */
-  height: 50px; /* Set button height */
-  background-color: #ccc;
+  height: 100%; /* Set button height to fill the row */
+  background-color: #e0e0e0;
   color: #000;
-  border: 1px solid #000;
+  border: 3px solid #000; /* Thick border */
   cursor: pointer;
   font-family: 'LeviAdobeDia', sans-serif;
-  font-weight: bold;
+  font-size: xx-large;
   margin: 0; /* Remove margin */
   border-radius: 0; /* Remove border radius for sharp edges */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
+  text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
 }
 
-.row.buttons button:hover {
-  background-color: #aaa;
+.buttons-container button:hover {
+  background-color: #c0c0c0;
+}
+
+.buttons-container .select-button {
+  background-color: #e0e0e0;
+  color: #000;
+  margin: 0 5px; /* Add margin for spacing */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
+  text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
+}
+
+.buttons-container .select-button:hover {
+  background-color: #c0c0c0;
 }

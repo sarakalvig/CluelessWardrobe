@@ -2,7 +2,7 @@
 
 .list-container {
   width: 100vw; /* Full viewport width */
-  min-height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
+  height: calc(100vh - 148px); /* Full viewport height minus header and footer height */
   background-image: url('../assets/leopard-pattern.jpg'); /* Leopard background image */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center;
@@ -12,36 +12,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   box-sizing: border-box;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .list-content {
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+  background-color: rgba(0, 0, 0, 0.9); /* Black semi-transparent background for content */
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  box-shadow: 5px 5px 0 #000, -2px -2px 0 #fff; /* Shadow for 90s effect */
   border-radius: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-h1, h2 {
-  margin: 20px 0;
+  margin-bottom: 20px;
+  color: #fff; /* White text color */
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
 }
 
 .clothing-items {
@@ -51,15 +35,43 @@ h1, h2 {
 }
 
 .clothing-item {
+  position: relative;
   margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  box-shadow: 5px 5px 0 #000, -2px -2px 0 #fff; /* Shadow for 90s effect */
+  padding: 10px;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
 }
 
 .clothing-item img {
   max-width: 200px;
   max-height: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
 }
 
 .clothing-item p {
   margin-top: 5px;
+  color: #000;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  display: none; /* Initially hide the text */
+}
+
+.clothing-item:hover p {
+  display: block; /* Show the text on hover */
+}
+
+.clothing-item button {
+  background-color: #ff0000; /* Red background for delete button */
+  color: #fff;
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
+}
+
+.clothing-item button:hover {
+  background-color: #cc0000; /* Darker red on hover */
 }

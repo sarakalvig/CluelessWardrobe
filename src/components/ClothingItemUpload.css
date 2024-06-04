@@ -16,11 +16,23 @@
 
 .upload-container {
   max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+  background-color: #000; /* Black background for content */
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  box-shadow: 5px 5px 0 #000, -2px -2px 0 #fff; /* Shadow for 90s effect */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff; /* White text color */
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-container h1, .upload-container label, .upload-container input, .upload-container button {
+  color: #fff; /* Ensure white text color */
+  text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
 }
 
 nav {
@@ -31,7 +43,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #007bff;
+  color: #0078d7;
   font-weight: bold;
 }
 
@@ -41,36 +53,53 @@ nav a:hover {
 
 h1 {
   text-align: center;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
 }
 
 input[type="file"] {
   display: block;
   margin: 1em 0;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  background-color: grey;
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
+  padding: 0.5em;
+}
+
+input[type="radio"] {
+  margin-right: 0.5em;
 }
 
 div {
   margin: 1em 0;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  font-size: large;
 }
 
 label {
   margin-right: 1em;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  font-size: x-large;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 1em;
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 button {
   display: block;
-  margin: 1em auto;
+  margin: 1em;
   padding: 0.5em 2em;
-  background-color: #007bff;
+  background-color: #0078d7;
   color: #fff;
-  border: none;
-  border-radius: 5px;
+  border: 3px solid #000; /* Thick border for a 90s feel */
+  box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
   cursor: pointer;
+  font-family: 'LeviAdobeDia', sans-serif; /* Imported font */
+  font-size: large;
 }
 
 button:hover {
