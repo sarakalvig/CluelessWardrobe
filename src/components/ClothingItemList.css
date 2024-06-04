@@ -63,7 +63,7 @@
 }
 
 .clothing-item button {
-  background-color: #ff0000; /* Red background for delete button */
+  background-color: #007bff;
   color: #fff;
   border: 3px solid #000; /* Thick border for a 90s feel */
   padding: 10px;
@@ -73,5 +73,5 @@
 }
 
 .clothing-item button:hover {
-  background-color: #cc0000; /* Darker red on hover */
+  background-color: #0056b3;
 }

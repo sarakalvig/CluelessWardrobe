@@ -3,11 +3,12 @@
   src: url('./fonts/LeviAdobeDia.ttf') format('truetype');
 }
 
+/*
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
   font-family: 'LeviAdobeDia', sans-serif;
 }
 
@@ -19,7 +20,11 @@ html, body {
 
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 img {
@@ -27,3 +32,4 @@ img {
   height: auto;
   display: block;
 }
+*/

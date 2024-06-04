@@ -8,8 +8,8 @@
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   padding-top: 74px; /* Space for the fixed header */
   padding-bottom: 74px; /* Space for the fixed footer */
 }
@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   width: 443px; /* Set column width */
+  height: calc(100vh - 148px); /* Set column height to fill space between header and footer */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
@@ -26,7 +27,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px; /* Set row height for images */
+  height: calc((100vh - 148px - 2 * 50px) / 2); /* Calculate height for images */
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
@@ -34,7 +35,7 @@
 
 .row img {
   width: 443px; /* Set image width */
-  height: 300px; /* Set image height */
+  height: 100%; /* Set image height */
   object-fit: cover; /* Crop the image to fit the dimensions */
   object-position: center; /* Center the image within the container */
   border-radius: 5px;
@@ -61,11 +62,15 @@
   border: 3px solid #000; /* Thick border */
   cursor: pointer;
   font-family: 'LeviAdobeDia', sans-serif;
+  font-weight: bold;
   font-size: xx-large;
   margin: 0; /* Remove margin */
   border-radius: 0; /* Remove border radius for sharp edges */
   box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
   text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
+  display: flex; /* Add flex display to center text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 }
 
 .buttons-container button:hover {
@@ -79,7 +84,6 @@
   box-shadow: 3px 3px 0 #000, -1px -1px 0 #fff; /* Shadow for 90s effect */
   text-shadow: 1px 1px 0 #000; /* Text shadow for 90s effect */
 }
-
 .buttons-container .select-button:hover {
   background-color: #c0c0c0;
 }
