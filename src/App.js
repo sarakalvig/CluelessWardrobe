@@ -46,7 +46,10 @@ const App = () => {
             <Route path="/browse" element={<BrowseClothing />} />
           </Routes>
         </main>
-        <Footer />
+        <Routes>
+          <Route path="/browse" element={<Footer showItems={true} />} />
+          <Route path="*" element={<Footer showItems={false} />} />
+        </Routes>
       </div>
     </Router>
   );
