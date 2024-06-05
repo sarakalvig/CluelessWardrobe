@@ -19,7 +19,7 @@
 .list-content {
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9); /* Black semi-transparent background for content */
+  background-color: #A9A9A9; /*rgba(0, 0, 0, 0.9); Black semi-transparent background for content */
   border: 3px solid #000; /* Thick border for a 90s feel */
   box-shadow: 5px 5px 0 #000, -2px -2px 0 #fff; /* Shadow for 90s effect */
   border-radius: 10px;

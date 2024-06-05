@@ -1,5 +1,7 @@
 /* BrowseClothing.css */
 
+/* Existing styles... */
+
 .browse-container {
   width: 100vw; /* Full viewport width */
   height: calc(100vh - 120px); /* Full viewport height minus header and footer height */
@@ -17,9 +19,12 @@
 .column {
   display: flex;
   flex-direction: column;
-  width: 443px; /* Set column width */
+  width: 460px; /* Adjusted column width */
   height: calc(100vh - 120px); /* Set column height to fill space between header and footer */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border: 5px solid #000; /* Thick black border around the column */
+  background-color: #A9A9A9; /* White background to contrast the border */
+  padding: 10px; /* Space between border and content */
 }
 
 .row {
@@ -28,17 +33,23 @@
   align-items: center;
   width: 100%;
   height: calc((100vh - 120px - 2 * 50px) / 2); /* Calculate height for images */
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
+  margin: 5px 0; /* Reduced space between rows */
+  padding: 5px; /* Reduced padding inside the row */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border: 2px dashed #000; /* Dashed border around rows for retro effect */
+  background-color: #f0f0f0; /* Light gray background for the rows */
 }
 
 .row img {
-  width: 443px; /* Set image width */
-  height: 100%; /* Set image height */
+  width: 100%; /* Set image width to 100% of its container */
+  height: 100%; /* Set image height to 100% of its container */
+  max-width: 440px; /* Max width for fixed size */
+  max-height: calc((100vh - 120px - 2 * 50px) / 2 - 10px); /* Max height for fixed size */
   object-fit: cover; /* Crop the image to fit the dimensions */
   object-position: center; /* Center the image within the container */
-  border-radius: 5px;
+  border: 3px solid #000; /* Thick black border around images */
+  border-radius: 0; /* No border radius for sharp edges */
+  box-shadow: 5px 5px 0 #888; /* Shadow for 90s effect */
 }
 
 .buttons-container {
@@ -48,7 +59,7 @@
   width: 100%; /* Ensure buttons span full width of the column */
   height: 50px; /* Set button row height */
   background-color: black; /* Black background for the container */
-  margin: 0; /* Remove margin */
+  margin: 5px 0; /* Reduced margin */
   padding: 0; /* Remove padding */
   border: 1px solid #000; /* Thick border for a 90s feel */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
