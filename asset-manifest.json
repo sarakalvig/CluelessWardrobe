@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.73c297ed.css",
-    "main.js": "/static/js/main.f361cca2.js",
+    "main.js": "/static/js/main.a5591f3d.js",
     "static/js/453.f6695dc6.chunk.js": "/static/js/453.f6695dc6.chunk.js",
     "static/media/leopard-pattern.jpg": "/static/media/leopard-pattern.52e9f871075f1e9e201b.jpg",
     "static/media/LeviAdobeDia.ttf": "/static/media/LeviAdobeDia.863910f586e8119de915.ttf",
     "index.html": "/index.html",
     "main.73c297ed.css.map": "/static/css/main.73c297ed.css.map",
-    "main.f361cca2.js.map": "/static/js/main.f361cca2.js.map",
+    "main.a5591f3d.js.map": "/static/js/main.a5591f3d.js.map",
     "453.f6695dc6.chunk.js.map": "/static/js/453.f6695dc6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73c297ed.css",
-    "static/js/main.f361cca2.js"
+    "static/js/main.a5591f3d.js"
   ]
 }
