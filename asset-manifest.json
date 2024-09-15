@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/CluelessWardrobe/static/css/main.fad7942e.css",
-    "main.js": "/CluelessWardrobe/static/js/main.043421ce.js",
-    "static/js/453.f6695dc6.chunk.js": "/CluelessWardrobe/static/js/453.f6695dc6.chunk.js",
+    "main.js": "/CluelessWardrobe/static/js/main.a95d1a5a.js",
+    "static/js/488.1a357fcd.chunk.js": "/CluelessWardrobe/static/js/488.1a357fcd.chunk.js",
     "static/media/leopard-pattern.jpg": "/CluelessWardrobe/static/media/leopard-pattern.52e9f871075f1e9e201b.jpg",
     "static/media/LeviAdobeDia.ttf": "/CluelessWardrobe/static/media/LeviAdobeDia.863910f586e8119de915.ttf",
     "index.html": "/CluelessWardrobe/index.html",
     "main.fad7942e.css.map": "/CluelessWardrobe/static/css/main.fad7942e.css.map",
-    "main.043421ce.js.map": "/CluelessWardrobe/static/js/main.043421ce.js.map",
-    "453.f6695dc6.chunk.js.map": "/CluelessWardrobe/static/js/453.f6695dc6.chunk.js.map"
+    "main.a95d1a5a.js.map": "/CluelessWardrobe/static/js/main.a95d1a5a.js.map",
+    "488.1a357fcd.chunk.js.map": "/CluelessWardrobe/static/js/488.1a357fcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fad7942e.css",
-    "static/js/main.043421ce.js"
+    "static/js/main.a95d1a5a.js"
   ]
 }
